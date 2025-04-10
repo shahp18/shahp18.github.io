@@ -1,3 +1,8 @@
+---
+layout: default
+permalink: /
+---
+
 ### Plot 1 – Top 10 UFO Shapes by State
 <iframe src="/assets/plot1.html" width="100%" height="500"></iframe>
 
