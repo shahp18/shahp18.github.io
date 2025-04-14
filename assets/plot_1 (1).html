@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-47af25493d1b029ece0f9d866055c163"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "country", "title": "Country", "type": "nominal"}, "opacity": {"condition": {"param": "param_10", "value": 1}, "value": 0.2}, "tooltip": [{"field": "shape", "type": "nominal"}, {"field": "country", "type": "nominal"}, {"field": "count", "type": "quantitative"}], "x": {"field": "shape", "sort": "-y", "title": "UFO Shape", "type": "nominal"}, "y": {"field": "count", "title": "Sightings Count", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_10", "select": {"type": "point", "fields": ["country"]}, "bind": "legend"}], "title": "Top 10 UFO Shapes by Country (Interactive)", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-47af25493d1b029ece0f9d866055c163": [{"shape": "circle", "country": "au", "count": 62}, {"shape": "circle", "country": "ca", "count": 284}, {"shape": "circle", "country": "de", "count": 10}, {"shape": "circle", "country": "gb", "count": 243}, {"shape": "circle", "country": "us", "count": 6118}, {"shape": "disk", "country": "au", "count": 50}, {"shape": "disk", "country": "ca", "count": 198}, {"shape": "disk", "country": "de", "count": 6}, {"shape": "disk", "country": "gb", "count": 102}, {"shape": "disk", "country": "us", "count": 4121}, {"shape": "fireball", "country": "au", "count": 34}, {"shape": "fireball", "country": "ca", "count": 218}, {"shape": "fireball", "country": "de", "count": 9}, {"shape": "fireball", "country": "gb", "count": 117}, {"shape": "fireball", "country": "us", "count": 5148}, {"shape": "formation", "country": "au", "count": 20}, {"shape": "formation", "country": "ca", "count": 98}, {"shape": "formation", "country": "de", "count": 3}, {"shape": "formation", "country": "gb", "count": 60}, {"shape": "formation", "country": "us", "count": 1990}, {"shape": "light", "country": "au", "count": 119}, {"shape": "light", "country": "ca", "count": 655}, {"shape": "light", "country": "de", "count": 20}, {"shape": "light", "country": "gb", "count": 361}, {"shape": "light", "country": "us", "count": 13473}, {"shape": "other", "country": "au", "count": 40}, {"shape": "other", "country": "ca", "count": 241}, {"shape": "other", "country": "de", "count": 9}, {"shape": "other", "country": "gb", "count": 133}, {"shape": "other", "country": "us", "count": 4466}, {"shape": "oval", "country": "au", "count": 30}, {"shape": "oval", "country": "ca", "count": 130}, {"shape": "oval", "country": "de", "count": 7}, {"shape": "oval", "country": "gb", "count": 86}, {"shape": "oval", "country": "us", "count": 3032}, {"shape": "sphere", "country": "au", "count": 15}, {"shape": "sphere", "country": "ca", "count": 205}, {"shape": "sphere", "country": "de", "count": 7}, {"shape": "sphere", "country": "gb", "count": 158}, {"shape": "sphere", "country": "us", "count": 4347}, {"shape": "triangle", "country": "au", "count": 43}, {"shape": "triangle", "country": "ca", "count": 268}, {"shape": "triangle", "country": "de", "count": 9}, {"shape": "triangle", "country": "gb", "count": 169}, {"shape": "triangle", "country": "us", "count": 6549}, {"shape": "unknown", "country": "au", "count": 25}, {"shape": "unknown", "country": "ca", "count": 207}, {"shape": "unknown", "country": "de", "count": 8}, {"shape": "unknown", "country": "gb", "count": 92}, {"shape": "unknown", "country": "us", "count": 4567}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
