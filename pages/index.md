@@ -16,6 +16,7 @@ In terms of data prep, the dataset was loaded via URL using pd.read_csv(). The s
 This interactive scatter plot maps UFO sightings over time, plotting the datetime on the x-axis and the duration of each sighting (in seconds) on the y-axis. Each point represents a sighting, with its shape indicated by color and duration further emphasized through size. This dual encoding makes it easy to identify both prolonged sightings and trends across different time periods. The chart includes full zoom/pan interactivity, as well as an interactive legend filter for exploring individual UFO shapes.
 
 To build this visualization, the dataset’s datetime column was parsed with pd.to_datetime() and durations were converted to numeric types. Outliers were trimmed to improve scaling. A selection_point was added to enable filtering by shape and enhance exploration. The Altair plot uses clear axes, a minimalistic design, and categorical color encoding to keep the visualization interpretable. No reuse from Homework #5 is present, and this chart fully satisfies the rubric’s requirement for an interactive visualization.
+
 ---
 ### Resources
 
